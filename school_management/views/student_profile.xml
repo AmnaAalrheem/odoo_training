@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="actions_student_profile" model="ir.actions.act_window">
+            <field name="name">Student profile</field>
+            <field name="res_model">student.profile</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to create a new Student.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_student_profile_form" model="ir.ui.view">
+            <field name="name">student.profile.form</field>
+            <field name="model">student.profile</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="city_id"/>
+                            <field name="degree"/>
+                            <field name="date_of_birth"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--record id="action_student_profile_search" model="ir.ui.view">
+            <field name="name">student.profile.search</field>
+            <field name="model">student.profile</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record-->
+
+        <record id="action_student_profile_tree" model="ir.ui.view">
+            <field name="name">student.profile.tree</field>
+            <field name="model">student.profile</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="city_id"/>
+                    <field name="degree"/>
+                    <field name="date_of_birth"/>
+                </tree>
+            </field>
+        </record>
+
+        
+
+        <menuitem
+            name="School management"
+            
+            id="menu_main_school"
+            sequence="10"
+            />
+
+        <menuitem
+            name="student profile"
+            parent="menu_main_school"
+            action="actions_student_profile"
+            id="menu_student_profile"
+            />
+
+         
+
+    </data>
+</odoo>
