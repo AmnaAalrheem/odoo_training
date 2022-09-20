@@ -17,6 +17,7 @@
     'depends': [],
     'data': [
         'security/ir.model.access.csv',
+        'data/data.xml',
         'views/student_profile.xml',
     ],
     'website': "https://smartdo-tech.com/",

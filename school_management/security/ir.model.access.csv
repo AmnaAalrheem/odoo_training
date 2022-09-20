@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_student_profile_user,student.profile.user,school_management.model_student_profile,,1,1,1,1
+access_student_semseter_user,student.semseter.user,school_management.model_student_semster,,1,1,1,1
+access_subject_profile_user,student.subject.user,school_management.model_subject_subject,,1,1,1,1
