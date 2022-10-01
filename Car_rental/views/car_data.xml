@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     <record id="action_car_data" model="ir.actions.act_window">
+        <field name="name">Car data</field>
+        <field name="res_model">car.data</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create a new Data.
+            </p>
+        </field>
+     </record>
+
+     <record id="action_car_data_form" model="ir.ui.view">
+        <field name="name">car.data.form</field>
+        <field name="model">car.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name_of_car"/>
+                        <field name="car_id"/>
+                        <field name="color"/>
+                        <field name="price"/>
+                        <field name="license_date"/>
+                        <field name="insurance_amount"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+     <!--record id="action_car_data_search" model="ir.ui.view">
+        <field name="name">car.data.search</field>
+        <field name="model">car.data</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+     </record-->
+
+     <record id="action_car_data_tree" model="ir.ui.view">
+        <field name="name">car.data.tree</field>
+        <field name="model">car.data</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="name_of_car"/>
+                    <field name="car_id"/>
+                    <field name="color"/>
+                    <field name="price"/>
+                    <field name="license_date"/>
+                    <field name="insurance_amount"/>
+            </tree>
+        </field>
+     </record>
+       <menuitem
+        name="Car rental"
+        
+        id="menu_main_car"
+        sequence="10"
+        />
+
+      <menuitem
+        name="Car Data"
+        parent="menu_main_car"
+        action="action_car_data"
+        id="menu_car_data"
+       />
+
+       <record id="action_customer_data" model="ir.actions.act_window">
+        <field name="name">customer data</field>
+        <field name="res_model">customer.data</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create a new Customer.
+            </p>
+        </field>
+     </record>
+
+     <record id="action_customer_data_form" model="ir.ui.view">
+        <field name="name">customer.data.form</field>
+        <field name="model">customer.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name_of_customer"/>
+                        <field name="phone"/>
+                        <field name="Identification_Number"/>
+                        <field name="license_number"/>
+                        <field name="contract_details"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+     <!--record id="action_car_data_search" model="ir.ui.view">
+        <field name="name">car.data.search</field>
+        <field name="model">car.data</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+     </record-->
+
+     <record id="action_customer_data_tree" model="ir.ui.view">
+        <field name="name">customer.data.tree</field>
+        <field name="model">customer.data</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="name_of_customer"/>
+                    <field name="phone"/>
+                    <field name="Identification_Number"/>
+                    <field name="license_number"/>
+                     <field name="contract_details"/>
+            </tree>
+        </field>
+     </record>
+       <menuitem
+        name="Car rental"
+        
+        id="menu_main_car"
+        sequence="10"
+        />
+
+       <menuitem
+        name="Customer Data"
+        parent="menu_main_car"
+        action="action_customer_data"
+        id="menu_customer_data"
+        
+        />
+
+
+    
+      <record id="action_tenancy_agreement" model="ir.actions.act_window">
+        <field name="name">Tenancy Agreement</field>
+        <field name="res_model">tenancy.agreement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create a new Tenancy Agreement.
+            </p>
+        </field>
+     </record>
+
+     <record id="action_tenancy_agreement_form" model="ir.ui.view">
+        <field name="name">tenancy.agreement.form</field>
+        <field name="model">tenancy.agreement</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="rent_contract_id"/>
+                        <field name="rent_contract_date"/>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                        <field name="number_of_days"/>
+                        <field name="rent_per_day"/>
+                        <field name="Total"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+     <!--record id="action_car_data_search" model="ir.ui.view">
+        <field name="name">car.data.search</field>
+        <field name="model">car.data</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+     </record-->
+
+     <record id="action_tenancy_agreement_tree" model="ir.ui.view">
+        <field name="name">tenancy.agreement.tree</field>
+        <field name="model">tenancy.agreement</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="rent_contract_id"/>
+                    <field name="rent_contract_date"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="number_of_days"/>
+                    <field name="rent_per_day"/>
+                    <field name="Total"/>
+            </tree>
+        </field>
+     </record>
+       <menuitem
+        name="Car rental"
+        
+        id="menu_main_car"
+        sequence="10"
+        />
+
+      <menuitem
+        name="Tenancy Agreement"
+        parent="menu_main_car"
+        action="action_tenancy_agreement"
+        id="menu_tenancy_agreement"
+       />
+
+      
+   </data>
+
+</odoo>
