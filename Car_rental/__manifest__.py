@@ -13,6 +13,7 @@ This module allows to generate a project/task from sales orders.
     'depends': [],
     'data': [
         'security/ir.model.access.csv',
+        'data/data.xml',
         'views/car_data.xml',
         
     ],

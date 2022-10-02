@@ -85,7 +85,17 @@
         <field name="model">customer.data</field>
         <field name="arch" type="xml">
             <form>
+                   <header>
+                  
+                    <button name="action_Create_Agreement" states="new" type="object" string="Set In Create Agreement" data-hotkey="w"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,create agreement,done"/>
+                </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="reg_number" readonly="1"/>
+                        </h1>
+                    </div>
                     <group>
                         <field name="name_of_customer"/>
                         <field name="phone"/>

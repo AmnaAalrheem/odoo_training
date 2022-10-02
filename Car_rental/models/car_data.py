@@ -25,6 +25,20 @@ class CustomerData(models.Model):
     Identification_Number= fields.Char(string="Identification NO",required=True)
     license_number=fields.Char(string="License  NO",required=True)
     contract_details= fields.One2many("tenancy.agreement","rent_contract_id",string="Contract Details",)
+    reg_number=fields.Char('Sequence')
+    state = fields.Selection([('new','New'),('create agreement','Create Agreement'),('done','Done')], default='new')
+
+
+
+    def action_Create_Agreement(self):
+        for rec in self:
+            rec.write({'state':'create agreement'})
+    @api.model
+    def create(self, vals):
+        
+        vals['reg_number'] = self.env['ir.sequence'].next_by_code('Customer.customer') or _('New')
+        result = super(CustomerData, self).create(vals)
+        return result
 
 
 class TenancyAgreement(models.Model):
